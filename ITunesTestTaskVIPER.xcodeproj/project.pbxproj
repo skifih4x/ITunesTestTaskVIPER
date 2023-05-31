@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		00E44E112A2772250037A322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E102A2772250037A322 /* AppDelegate.swift */; };
 		00E44E132A2772250037A322 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E122A2772250037A322 /* SceneDelegate.swift */; };
-		00E44E152A2772250037A322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E142A2772250037A322 /* ViewController.swift */; };
-		00E44E182A2772250037A322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E44E162A2772250037A322 /* Main.storyboard */; };
 		00E44E1A2A2772250037A322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E44E192A2772250037A322 /* Assets.xcassets */; };
 		00E44E1D2A2772250037A322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E44E1B2A2772250037A322 /* LaunchScreen.storyboard */; };
+		00E44E2C2A277EBB0037A322 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E2B2A277EBB0037A322 /* NetworkManager.swift */; };
+		00E44E2E2A277EE40037A322 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E2D2A277EE40037A322 /* MusicModel.swift */; };
+		00E44E302A2783670037A322 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E2F2A2783670037A322 /* SearchViewController.swift */; };
+		00E44E322A27837F0037A322 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E312A27837F0037A322 /* SearchPresenter.swift */; };
+		00E44E342A27839D0037A322 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E332A27839D0037A322 /* SearchInteractor.swift */; };
+		00E44E362A2783AC0037A322 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E352A2783AC0037A322 /* SearchRouter.swift */; };
+		00E44E392A278B300037A322 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E382A278B300037A322 /* MusicPlayerViewController.swift */; };
+		00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */; };
+		00E44E3D2A27911A0037A322 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */; };
+		00E44E3F2A2791330037A322 /* MusicPlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00E44E0D2A2772250037A322 /* ITunesTestTaskVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITunesTestTaskVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E44E102A2772250037A322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E44E122A2772250037A322 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00E44E142A2772250037A322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00E44E172A2772250037A322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00E44E192A2772250037A322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00E44E1C2A2772250037A322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00E44E1E2A2772250037A322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E44E2B2A277EBB0037A322 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		00E44E2D2A277EE40037A322 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		00E44E2F2A2783670037A322 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		00E44E312A27837F0037A322 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		00E44E332A27839D0037A322 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		00E44E352A2783AC0037A322 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		00E44E382A278B300037A322 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
+		00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerInteractor.swift; sourceTree = "<group>"; };
+		00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,87 @@
 		00E44E0F2A2772250037A322 /* ITunesTestTaskVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				00E44E102A2772250037A322 /* AppDelegate.swift */,
-				00E44E122A2772250037A322 /* SceneDelegate.swift */,
-				00E44E142A2772250037A322 /* ViewController.swift */,
-				00E44E162A2772250037A322 /* Main.storyboard */,
-				00E44E192A2772250037A322 /* Assets.xcassets */,
+				00E44E292A277EA90037A322 /* Services */,
+				00E44E282A277EA50037A322 /* Model */,
+				00E44E262A277D190037A322 /* Modules */,
+				00E44E252A277D040037A322 /* Resources */,
+				00E44E242A277CFE0037A322 /* App */,
 				00E44E1B2A2772250037A322 /* LaunchScreen.storyboard */,
-				00E44E1E2A2772250037A322 /* Info.plist */,
 			);
 			path = ITunesTestTaskVIPER;
+			sourceTree = "<group>";
+		};
+		00E44E242A277CFE0037A322 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E102A2772250037A322 /* AppDelegate.swift */,
+				00E44E122A2772250037A322 /* SceneDelegate.swift */,
+				00E44E1E2A2772250037A322 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		00E44E252A277D040037A322 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E192A2772250037A322 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00E44E262A277D190037A322 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E272A277D1E0037A322 /* Search */,
+				00E44E372A278B140037A322 /* Music */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		00E44E272A277D1E0037A322 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E2F2A2783670037A322 /* SearchViewController.swift */,
+				00E44E312A27837F0037A322 /* SearchPresenter.swift */,
+				00E44E332A27839D0037A322 /* SearchInteractor.swift */,
+				00E44E352A2783AC0037A322 /* SearchRouter.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		00E44E282A277EA50037A322 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E2D2A277EE40037A322 /* MusicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00E44E292A277EA90037A322 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E2A2A277EB20037A322 /* NetworkManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		00E44E2A2A277EB20037A322 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E2B2A277EBB0037A322 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		00E44E372A278B140037A322 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				00E44E382A278B300037A322 /* MusicPlayerViewController.swift */,
+				00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */,
+				00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */,
+				00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +215,6 @@
 			files = (
 				00E44E1D2A2772250037A322 /* LaunchScreen.storyboard in Resources */,
 				00E44E1A2A2772250037A322 /* Assets.xcassets in Resources */,
-				00E44E182A2772250037A322 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +225,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E44E152A2772250037A322 /* ViewController.swift in Sources */,
+				00E44E302A2783670037A322 /* SearchViewController.swift in Sources */,
+				00E44E3F2A2791330037A322 /* MusicPlayerRouter.swift in Sources */,
+				00E44E2C2A277EBB0037A322 /* NetworkManager.swift in Sources */,
+				00E44E322A27837F0037A322 /* SearchPresenter.swift in Sources */,
+				00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */,
 				00E44E112A2772250037A322 /* AppDelegate.swift in Sources */,
+				00E44E362A2783AC0037A322 /* SearchRouter.swift in Sources */,
+				00E44E2E2A277EE40037A322 /* MusicModel.swift in Sources */,
 				00E44E132A2772250037A322 /* SceneDelegate.swift in Sources */,
+				00E44E392A278B300037A322 /* MusicPlayerViewController.swift in Sources */,
+				00E44E342A27839D0037A322 /* SearchInteractor.swift in Sources */,
+				00E44E3D2A27911A0037A322 /* MusicPlayerInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00E44E162A2772250037A322 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00E44E172A2772250037A322 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00E44E1B2A2772250037A322 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +377,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ITunesTestTaskVIPER/Info.plist;
+				INFOPLIST_FILE = ITunesTestTaskVIPER/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +404,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ITunesTestTaskVIPER/Info.plist;
+				INFOPLIST_FILE = ITunesTestTaskVIPER/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
