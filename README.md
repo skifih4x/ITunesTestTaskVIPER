@@ -1,6 +1,7 @@
 # ITunesTestTaskVIPER
 https://github.com/skifih4x/ITunesTestTaskVIPER/assets/84291357/d9eace52-3f5f-43a7-a3ab-8b28d2ff52d7
-## Стэк - VIPER, UITableView, UISearchBar, AVFoundation, AVPlayer, 
+## Приложения для поиска любимой музыки, а так же прослушивания конкретной песни
+## Стэк - VIPER, UITableView, UISearchBar, AVFoundation, AVPlayer, no storyboard
 ### SearchViewController
 **'SearchViewController'** отображает экран поиска музыки. Он содержит таблицу для отображения результатов поиска, а также поле поиска, с помощью которого пользователь может вводить ключевые слова для поиска музыки.
 
