@@ -51,6 +51,7 @@ final class SearchViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(SearchCell.self, forCellReuseIdentifier: SearchCell.identifier)
         
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
