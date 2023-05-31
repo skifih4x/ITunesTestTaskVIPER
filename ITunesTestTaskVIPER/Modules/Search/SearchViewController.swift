@@ -33,6 +33,15 @@ final class SearchViewController: UIViewController {
         setupSearchController()
     }
     
+    // MARK: - Private methods
+    
+    private func showSearchErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Please enter at least 3 characters for the search", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - UI Setup
     
     private func setupUI() {
@@ -117,8 +126,13 @@ extension SearchViewController: UITableViewDelegate {
 // MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let keyword = searchBar.text, keyword.count >= 3 else { return }
+        guard let keyword = searchBar.text else { return }
+        if keyword.count < 3 {
+            showSearchErrorAlert()
+            return
+        }
         presenter?.searchMusic(keyword)
     }
     
