@@ -6,17 +6,19 @@
 //
 
 import Foundation
+
 protocol SearchViewProtocol: AnyObject {
     func showLoading()
     func hideLoading()
     func showMusicResults(_ results: [MusicResult])
 }
+
 protocol SearchPresenterProtocol {
     func searchMusic(_ keyword: String)
     func showMusicPlayer(with musicResult: MusicResult)
 }
 
-class SearchPresenter: SearchPresenterProtocol {
+final class SearchPresenter: SearchPresenterProtocol {
     weak var view: SearchViewProtocol?
     var interactor: SearchInteractorProtocol?
     var router: SearchRouterProtocol?
@@ -39,7 +41,5 @@ extension SearchPresenter: SearchInteractorOutputProtocol {
     
     func didFailToFetchMusic(_ error: Error) {
         view?.hideLoading()
-        // Handle error
     }
 }
-

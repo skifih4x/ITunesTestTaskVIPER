@@ -20,7 +20,6 @@
 		00E44E392A278B300037A322 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E382A278B300037A322 /* MusicPlayerViewController.swift */; };
 		00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */; };
 		00E44E3D2A27911A0037A322 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */; };
-		00E44E3F2A2791330037A322 /* MusicPlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		00E44E382A278B300037A322 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerInteractor.swift; sourceTree = "<group>"; };
-		00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 				00E44E382A278B300037A322 /* MusicPlayerViewController.swift */,
 				00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */,
 				00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */,
-				00E44E3E2A2791330037A322 /* MusicPlayerRouter.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E44E302A2783670037A322 /* SearchViewController.swift in Sources */,
-				00E44E3F2A2791330037A322 /* MusicPlayerRouter.swift in Sources */,
 				00E44E2C2A277EBB0037A322 /* NetworkManager.swift in Sources */,
 				00E44E322A27837F0037A322 /* SearchPresenter.swift in Sources */,
 				00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */,

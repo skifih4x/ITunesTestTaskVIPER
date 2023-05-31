@@ -12,14 +12,12 @@ protocol MusicPlayerViewProtocol: AnyObject {
     func showMusicDetails(_ musicResult: MusicResult)
 }
 
-// ... Ваш код продолжается здесь
-
-class MusicPlayerPresenter {
-    weak var view: MusicPlayerViewProtocol?
-}
-
 protocol MusicPlayerPresenterProtocol {
     func configure(with musicResult: MusicResult)
+}
+
+final class MusicPlayerPresenter {
+    weak var view: MusicPlayerViewProtocol?
 }
 
 extension MusicPlayerPresenter: MusicPlayerPresenterProtocol {
@@ -27,4 +25,3 @@ extension MusicPlayerPresenter: MusicPlayerPresenterProtocol {
         view?.showMusicDetails(musicResult)
     }
 }
-

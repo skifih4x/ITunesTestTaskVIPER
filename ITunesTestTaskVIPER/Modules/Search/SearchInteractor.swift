@@ -16,7 +16,7 @@ protocol SearchInteractorOutputProtocol: AnyObject {
     func didFailToFetchMusic(_ error: Error)
 }
 
-class SearchInteractor: SearchInteractorProtocol {
+final class SearchInteractor: SearchInteractorProtocol {
     weak var presenter: SearchInteractorOutputProtocol?
     let networkService: NetworkServiceProtocol
     
@@ -35,4 +35,3 @@ class SearchInteractor: SearchInteractorProtocol {
         }
     }
 }
-

@@ -7,7 +7,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
+    
     private let tableView = UITableView()
     private let searchController = UISearchController(searchResultsController: nil)
     private let activityIndicatorView = UIActivityIndicatorView(style: .medium)

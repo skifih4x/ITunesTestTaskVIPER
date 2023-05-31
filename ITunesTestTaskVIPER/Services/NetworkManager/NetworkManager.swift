@@ -7,15 +7,17 @@
 
 import Foundation
 
-import UIKit
-
-// Протокол для сервиса работы с сетью
 protocol NetworkServiceProtocol {
     func fetchMusic(keyword: String, completion: @escaping (Result<[MusicResult], Error>) -> Void)
 }
 
-// Реализация сервиса работы с сетью
-class NetworkService: NetworkServiceProtocol {
+enum NetworkError: Error {
+    case invalidKeyword
+    case invalidURL
+    case noData
+}
+
+final class NetworkService: NetworkServiceProtocol {
     func fetchMusic(keyword: String, completion: @escaping (Result<[MusicResult], Error>) -> Void) {
         guard let encodedKeyword = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             completion(.failure(NetworkError.invalidKeyword))
@@ -29,7 +31,7 @@ class NetworkService: NetworkServiceProtocol {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 completion(.failure(error))
                 return
@@ -48,17 +50,6 @@ class NetworkService: NetworkServiceProtocol {
                 completion(.failure(error))
             }
         }
-        
         task.resume()
     }
 }
-
-// Пример ошибок сетевого сервиса
-enum NetworkError: Error {
-    case invalidKeyword
-    case invalidURL
-    case noData
-}
-
-// ... Ваш код продолжается здесь
-

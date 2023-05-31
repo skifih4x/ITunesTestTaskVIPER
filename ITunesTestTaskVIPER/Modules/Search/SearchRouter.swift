@@ -11,7 +11,7 @@ protocol SearchRouterProtocol {
     func presentMusicPlayerScreen(with musicResult: MusicResult)
 }
 
-class SearchRouter: SearchRouterProtocol {
+final class SearchRouter: SearchRouterProtocol {
     weak var viewController: SearchViewController?
     
     static func createModule() -> UIViewController {

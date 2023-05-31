@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
 
-class MusicPlayerViewController: UIViewController {
+final class MusicPlayerViewController: UIViewController {
     private let coverImageView = UIImageView()
     private let artistLabel = UILabel()
     private let trackLabel = UILabel()
+    private let playButton = UIButton()
     
     private let musicResult: MusicResult
+    
+    private var player: AVPlayer?
     
     init(musicResult: MusicResult) {
         self.musicResult = musicResult
@@ -57,12 +61,50 @@ class MusicPlayerViewController: UIViewController {
             trackLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             trackLabel.topAnchor.constraint(equalTo: artistLabel.bottomAnchor, constant: 8)
         ])
+        
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.setTitle("Play", for: .normal)
+        playButton.setTitle("Stop", for: .selected)
+        playButton.setTitleColor(.blue, for: .normal)
+        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        view.addSubview(playButton)
+        
+        NSLayoutConstraint.activate([
+            playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playButton.topAnchor.constraint(equalTo: trackLabel.bottomAnchor, constant: 16)
+        ])
     }
     
     private func configure(with musicResult: MusicResult) {
-        coverImageView.image = UIImage(named: "placeholder_image") // Placeholder image
         artistLabel.text = musicResult.artistName
         trackLabel.text = musicResult.trackName ?? musicResult.collectionName
+        
+        guard let imageURL = URL(string: musicResult.artworkUrl100) else {
+            coverImageView.image = UIImage(named: "placeholder_image")
+            return
+        }
+        
+        DispatchQueue.global().async {
+            if let imageData = try? Data(contentsOf: imageURL) {
+                DispatchQueue.main.async { [weak self] in
+                    self?.coverImageView.image = UIImage(data: imageData)
+                }
+            }
+        }
+    }
+    
+    @objc private func playButtonTapped() {
+        if playButton.isSelected {
+            player?.pause()
+        } else {
+            guard let previewURLString = musicResult.previewUrl, let previewURL = URL(string: previewURLString) else {
+                return
+            }
+            
+            player = AVPlayer(url: previewURL)
+            player?.play()
+        }
+        
+        playButton.isSelected = !playButton.isSelected
     }
 }
-

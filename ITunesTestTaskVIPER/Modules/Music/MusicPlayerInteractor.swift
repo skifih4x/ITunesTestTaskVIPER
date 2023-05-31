@@ -7,16 +7,16 @@
 
 import Foundation
 
-class MusicPlayerInteractor {
+protocol MusicPlayerInteractorProtocol {
+    func getMusicResult() -> MusicResult
+}
+
+final class MusicPlayerInteractor {
     let musicResult: MusicResult
     
     init(musicResult: MusicResult) {
         self.musicResult = musicResult
     }
-}
-
-protocol MusicPlayerInteractorProtocol {
-    func getMusicResult() -> MusicResult
 }
 
 extension MusicPlayerInteractor: MusicPlayerInteractorProtocol {
