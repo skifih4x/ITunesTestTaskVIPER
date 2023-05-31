@@ -5,22 +5,35 @@
 //  Created by Артем Орлов on 31.05.2023.
 //
 
+//
+//  SearchViewController.swift
+//  ITunesTestTaskVIPER
+//
+//  Created by Артем Орлов on 31.05.2023.
+//
+
 import UIKit
 
 final class SearchViewController: UIViewController {
     
+    // MARK: - Properties
+    
     private let tableView = UITableView()
     private let searchController = UISearchController(searchResultsController: nil)
-    private let activityIndicatorView = UIActivityIndicatorView(style: .medium)
+    private let activityIndicatorView = UIActivityIndicatorView(style: .large)
     
     var presenter: SearchPresenterProtocol?
     var musicResults: [MusicResult] = []
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupSearchController()
     }
+    
+    // MARK: - UI Setup
     
     private func setupUI() {
         title = "Music Search"
@@ -38,7 +51,7 @@ final class SearchViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(SearchCell.self, forCellReuseIdentifier: SearchCell.identifier)
         
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(activityIndicatorView)
@@ -57,6 +70,8 @@ final class SearchViewController: UIViewController {
         definesPresentationContext = true
     }
     
+    // MARK: - Loading Indicator
+    
     private func showLoadingIndicator() {
         tableView.isHidden = true
         activityIndicatorView.startAnimating()
@@ -67,37 +82,64 @@ final class SearchViewController: UIViewController {
             self.tableView.isHidden = false
             self.activityIndicatorView.stopAnimating()
         }
-
-       
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return musicResults.count
+        musicResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.identifier, for: indexPath) as? SearchCell else { return UITableViewCell()}
         let musicResult = musicResults[indexPath.row]
-        cell.textLabel?.text = "\(musicResult.trackName ?? "") - \(musicResult.artistName)"
+        cell.configure(with: musicResult)
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter?.showMusicPlayer(with: musicResults[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
 }
+
+// MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let keyword = searchBar.text, keyword.count >= 3 else { return }
         presenter?.searchMusic(keyword)
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        musicResults.removeAll()
+        tableView.reloadData()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        searchController.searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            musicResults.removeAll()
+            tableView.reloadData()
+        }
+    }
 }
+
+// MARK: - SearchViewProtocol
 
 extension SearchViewController: SearchViewProtocol {
     func showLoading() {
@@ -113,7 +155,5 @@ extension SearchViewController: SearchViewProtocol {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-
     }
 }
-

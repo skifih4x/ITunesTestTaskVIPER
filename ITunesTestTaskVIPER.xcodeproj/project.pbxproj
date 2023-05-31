@@ -20,6 +20,8 @@
 		00E44E392A278B300037A322 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E382A278B300037A322 /* MusicPlayerViewController.swift */; };
 		00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */; };
 		00E44E3D2A27911A0037A322 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */; };
+		00F15FF02A27CD0000E92D56 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F15FEF2A27CD0000E92D56 /* SearchCell.swift */; };
+		00F15FF32A27D55200E92D56 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F15FF22A27D55200E92D56 /* UIImageView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		00E44E382A278B300037A322 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		00E44E3A2A2791060037A322 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerInteractor.swift; sourceTree = "<group>"; };
+		00F15FEF2A27CD0000E92D56 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		00F15FF22A27D55200E92D56 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +74,12 @@
 		00E44E0F2A2772250037A322 /* ITunesTestTaskVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				00E44E262A277D190037A322 /* Modules */,
 				00E44E292A277EA90037A322 /* Services */,
 				00E44E282A277EA50037A322 /* Model */,
-				00E44E262A277D190037A322 /* Modules */,
-				00E44E252A277D040037A322 /* Resources */,
+				00F15FF12A27D54700E92D56 /* Extension */,
 				00E44E242A277CFE0037A322 /* App */,
+				00E44E252A277D040037A322 /* Resources */,
 				00E44E1B2A2772250037A322 /* LaunchScreen.storyboard */,
 			);
 			path = ITunesTestTaskVIPER;
@@ -114,6 +119,7 @@
 				00E44E312A27837F0037A322 /* SearchPresenter.swift */,
 				00E44E332A27839D0037A322 /* SearchInteractor.swift */,
 				00E44E352A2783AC0037A322 /* SearchRouter.swift */,
+				00F15FEE2A27CCF800E92D56 /* Cell */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -150,6 +156,22 @@
 				00E44E3C2A27911A0037A322 /* MusicPlayerInteractor.swift */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		00F15FEE2A27CCF800E92D56 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				00F15FEF2A27CD0000E92D56 /* SearchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		00F15FF12A27D54700E92D56 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00F15FF22A27D55200E92D56 /* UIImageView + Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,12 +245,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E44E302A2783670037A322 /* SearchViewController.swift in Sources */,
+				00F15FF02A27CD0000E92D56 /* SearchCell.swift in Sources */,
 				00E44E2C2A277EBB0037A322 /* NetworkManager.swift in Sources */,
 				00E44E322A27837F0037A322 /* SearchPresenter.swift in Sources */,
 				00E44E3B2A2791060037A322 /* MusicPlayerPresenter.swift in Sources */,
 				00E44E112A2772250037A322 /* AppDelegate.swift in Sources */,
 				00E44E362A2783AC0037A322 /* SearchRouter.swift in Sources */,
 				00E44E2E2A277EE40037A322 /* MusicModel.swift in Sources */,
+				00F15FF32A27D55200E92D56 /* UIImageView + Extension.swift in Sources */,
 				00E44E132A2772250037A322 /* SceneDelegate.swift in Sources */,
 				00E44E392A278B300037A322 /* MusicPlayerViewController.swift in Sources */,
 				00E44E342A27839D0037A322 /* SearchInteractor.swift in Sources */,
